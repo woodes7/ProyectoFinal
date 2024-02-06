@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Periódico</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/stilo.css" th:href="@{/css/stilo.css}">
+</head>
+<body>
+
+    <header>
+        <h1>Periódico Primavera</h1>
+    </header>
+
+    <nav>
+		<div class="dropdown">
+           <!-- <button class="dropbtn">Menu 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">        
+					AQUi van las seccion  y de mas del menu 
+                <a href="">Nacional</a>
+                <a href="#">Internacional</a>            
+                <a href="#">Cuenta</a> -->   
+            </div>
+        </div>    
+
+        <div class="account-dropdown">
+            <button class="account-dropbtn">Cuenta 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="account-dropdown-content">
+                <a th:href="@{/auth/registrar}">Registrar</a>
+				<a th:href="@{/auth/login}">Login</a>
+            </div>
+        </div>
+    </nav>
+    
+
+  	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+		th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js"
+		th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

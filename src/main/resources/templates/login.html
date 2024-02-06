@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Periódico</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/stilo.css" th:href="@{/css/stilo.css}">
+    
+</head>
+<body>
+
+<header>
+    <h1>Periodico Primavera</h1>
+</header>
+
+<nav>  
+     <a th:href="@{/}">Inicio</a>              
+     <a th:href="@{/auth/registrar}">Registrar</a>     
+</nav>
+
+<div class="contenedor form-login">
+		<p class="titulo">Login</p>
+		<form class="form" id="loginform" method="POST" th:action="@{/auth/login-post}" role="form">
+			<input id="login-username" type="email" class="input" name="username" placeholder="email" required>
+			<input id="login-password" type="password" class="input" name="password" placeholder="password" required>
+			<button type="submit" class="col-12 form-btn">Acceder</button>			
+		</form>
+		<form class="mb-3" method="GET"  >
+			
+		</form>
+		<form th:action="@{/auth/iniciarRecuperacion}" th:method="get">
+    		<button type="submit" class="form-btn negro">Recuperar contraseña</button>
+</form>
+
+<!--<script th:src="@{/script.js}"></script>-->
+</body>
+</html>
